@@ -9,16 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="images/" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
     <title>Michał Czech | Portfolio</title>
+    <!-- css file & material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
-        <header>
-            <h1 class="logo">Logo</h1>
+        <header class="header">
             <nav class="nav" id="nav">
-                <ul>
+                <span class="menu-toggle" id="nav-toggler">
+                    <i class="material-icons menu">menu</i>
+                </span>
+                <h1 class="logo">Logo</h1>
+                <ul class="main-nav" id="main-nav">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">O mnie</a></li>
                     <li><a href="#skills">Umiejetnosci</a></li>
@@ -29,12 +34,15 @@
                     <li></li>
                     <li></li>
                 </ul>
+
             </nav>
         </header>
 
         <section class="section" id="home">
             <div class="hero">
-                <h1 class="hero-text">Witaj na mojej stronie portoflio</h1>
+                <img src="images/hero-image.jpg" alt="hero-image">
+                <h1 class="hero-text">Witaj na mojej stronie portfolio
+                    <br> <span class="txt-type" data-wait="3000" data-words="['Milo cie widziec', 'Nice to see you', 'Herzlich wilkommen']"></span></h1>
             </div>
         </section>
 
@@ -164,9 +172,10 @@
     </main>
 
     <!-- Jquery & Js files -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>
