@@ -334,6 +334,25 @@ nav ul {
   cursor: pointer;
 }
 
+/* SOCIAL */
+.social-container {
+  background-color: #ebebeb;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 20px;
+}
+
+.social-container img {
+  width: 30vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
+
+.social-container img:last-child {
+  margin-bottom: 30px;
+}
+
 /* MEDIA QUERIES */
 
 /* Desktop navbar  */
@@ -996,5 +1015,36 @@ nav ul {
 
   .project-card {
     width: 20vw;
+  }
+}
+
+/* SOCIAL */
+@media (min-width: 481px) {
+  .social-container img {
+    width: 36vw;
+  }
+}
+
+@media (min-width: 961px) {
+  .social-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+
+  .social-container img {
+    width: 20vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .social-container img {
+    width: 18vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .social-container img {
+    width: 15vw;
   }
 }
