@@ -26,6 +26,10 @@ ul {
   margin-top: 5px;
 }
 
+img {
+  cursor: pointer;
+}
+
 header {
   background-color: #ebebeb;
   width: 100%;
@@ -128,6 +132,7 @@ nav ul {
 
 /* about page */
 .about-section {
+  margin-top: 40px;
 }
 
 .about-header {
@@ -171,6 +176,7 @@ nav ul {
   color: #1a1f25;
   background-color: #f2915a;
   text-transform: uppercase;
+  width: 116px;
 }
 
 .about-cv {
@@ -351,6 +357,14 @@ nav ul {
 
 .social-container img:last-child {
   margin-bottom: 30px;
+}
+
+.footer {
+  background-color: #1a1f25;
+  color: #ebebeb;
+  height: 60px;
+  padding-top: 25px;
+  padding-left: 34px;
 }
 
 /* MEDIA QUERIES */
@@ -628,6 +642,7 @@ nav ul {
     margin-left: 22em;
   }
 }
+
 @media (min-width: 1024px) {
   .skills-basic {
     margin-left: 22em;
@@ -846,6 +861,7 @@ nav ul {
     margin-left: 22em;
   }
 }
+
 @media (min-width: 1024px) {
   .skills-basic {
     margin-left: 22em;
@@ -941,7 +957,7 @@ nav ul {
   .project-card img {
     height: 250px;
   }
-  
+
   .card-btn {
     margin-left: 7em;
   }
@@ -968,9 +984,9 @@ nav ul {
 }
 
 @media (min-width: 961px) {
-   .card-btn {
-     margin-left: 5em;
-   }
+  .card-btn {
+    margin-left: 5em;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -1021,7 +1037,7 @@ nav ul {
 /* SOCIAL */
 @media (min-width: 481px) {
   .social-container img {
-    width: 36vw;
+    width: 20vw;
   }
 }
 
@@ -1039,12 +1055,89 @@ nav ul {
 
 @media (min-width: 1025px) {
   .social-container img {
-    width: 18vw;
+    width: 15vw;
   }
 }
 
 @media (min-width: 1600px) {
   .social-container img {
     width: 15vw;
+  }
+}
+
+/* Footer */
+@media (min-width: 378px) {
+  .footer {
+    padding-left: 35px;
+  }
+}
+
+@media (min-width: 481px) {
+  .footer {
+    padding-left: 91px;
+    padding-right: 96px;
+  }
+}
+
+@media (min-width: 641px) {
+  .footer {
+    padding-left: 191px;
+    padding-right: 126px;
+    padding-bottom: 48px;
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 266px;
+  }
+}
+
+@media (min-width: 880px) {
+  .footer {
+    padding-left: 317px;
+  }
+}
+
+@media (min-width: 940px) {
+  .footer {
+    padding-left: 347px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer {
+    padding-left: 400px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer {
+    padding-left: 410px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding-left: 460px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .footer {
+    padding-left: 490px;
+  }
+}
+
+@media (min-width: 1370px) {
+  .footer {
+    padding-left: 600px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .footer {
+    padding-left: 700px;
   }
 }
