@@ -110,7 +110,7 @@ nav ul {
 /* Hero image */
 .hero {
   position: relative;
-  margin-top: 85px;
+  margin-top: 80px;
 }
 
 .hero img {
@@ -130,6 +130,43 @@ nav ul {
   font-size: 2.5rem;
 }
 
+/* Theme switch style */
+.switcherTitle {
+  margin-left: 30px;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: #1a1f25;
+}
+
+.themeContainer {
+  background-color: #ebebeb;
+  padding-bottom: 25px;
+  margin-top: -4px;
+}
+
+.theme {
+  cursor: pointer;
+  color: #000;
+  font-size: 15px;
+  border: 1px solid #000;
+  background-color: #f2915a;
+  width: 100px;
+  height: 40px;
+  margin-top: 40px;
+}
+
+.language {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.switchers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
 /* about page */
 .about-section {
   margin-top: 40px;
@@ -142,6 +179,7 @@ nav ul {
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
 /* Moje zdjecie albo do usuniecia */
@@ -163,6 +201,9 @@ nav ul {
   height: 30px;
   padding-top: 4px;
   padding-left: 20px;
+  border: 1px solid #000;
+  color: #1a1f25;
+  background-color: #f2915a;
 }
 
 .about-btn {
@@ -172,17 +213,11 @@ nav ul {
 }
 
 .about-contact {
-  border: 1px solid #1a1f25;
-  color: #1a1f25;
-  background-color: #f2915a;
   text-transform: uppercase;
   width: 116px;
 }
 
 .about-cv {
-  border: 1px solid #1a1f25;
-  color: #1a1f25;
-  background-color: #f2915a;
   padding-left: 39px;
   margin-right: 100px;
 }
@@ -392,10 +427,10 @@ nav ul {
     margin-left: 120px;
   }
 
-  .main-nav li {
+  /* .main-nav li {
     margin: 0;
     padding: 0;
-  }
+  } */
 
   .main-nav li a {
     margin-left: 30px;
