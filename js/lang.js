@@ -3,24 +3,21 @@ const english = document.getElementById('english');
 const footer = document.querySelector('footer');
 english.addEventListener('click', function() {
     console.log('clicked');
-    a[1].innerText = 'About me';
+    a[1].innerText = 'About';
     a[2].innerText = 'Skills';
     a[3].innerText = 'Projects';
-    a[4].innerText = 'Social media';
+    a[4].innerText = 'Socials';
     a[5].innerText = 'Contact';
     heroText.innerText = 'Welcome on my portfolio website';
     switcherTitle.innerText = 'If you want to change text or language you can do it here';
     light.innerText = 'Light Theme';
     dark.innerText = 'Dark Theme';
     aboutHeader.innerText = 'About me';
-    aboutDescription.innerText = 'Hey, My name is Michał. Recently I finished high school,' +
-    'currently I have vacations and I am looking for a job or practice as front end developer.' +
-    ' I have been learning front end since February 2018, when I was in second high school class. '+
-    ' I have been learning in my free time after school but sometimes I have not enought time to learn' + 
-    ' because of the school duty that I had, but I tried to find some time to learn some new stuff of front end.'+
-    ' Learning new stuff of programming and front end makes me really happy and I enjoy it very much.'+
-    ' For my summer holidays that I am currently having I am looking for a job that will teach more stuff, '+
-    ' I can practice my knowledge in a real life projects and learning from more experienced developers';
+    aboutDescription.innerText = 'Hi, Welcome. I am warmly welcome You on my website. My name is Micheal. Currently I am studying first year of IT at PJAIT in Warsaw.'+
+    'I am looking for a job or intership holidays. I have started learning front-end since February 2018. ' +
+    'I spend my free time on learning front-end developer unfortunetly in the school year I have not much free time for learning, hovever I '+
+    'found time for learning front-end because it makes me happy. I wanna to try myself in real projects under the guidance of experience people.' +
+    'This year at collage I have learned languages like: JAVA (laguage basics, swing library and javafx framework), C++, C, SQL, BASH';
     aboutContact.innerText = 'Contact';
     skillsBasicHeader.innerText = 'Skills';
     skillsSubHeader.innerText = 'I know but I did not use much';
@@ -51,14 +48,19 @@ polish.addEventListener('click', function() {
     a[1].innerText = 'O mnie';
     a[2].innerText = 'Umiejętności';
     a[3].innerText = 'Projekty';
-    a[4].innerText = 'Media społecznościowe';
+    a[4].innerText = 'Społeczności';
     a[5].innerText = 'Kontakt';
     heroText.innerText = 'Witaj na mojej stronie portfolio';
     switcherTitle.innerText = 'Jeżeli chcesz zmienić kolory na stronie lub jezyk mozesz to zrobic tutaj ';
     light.innerText = 'Jasny';
     dark.innerText = 'Ciemny';
     aboutHeader.innerText = 'O mnie';
-    aboutDescription.innerText = 'Witaj, Nazywam się Michał. Ukończyłem liceum ogolnokształcące, aktualnie mam wakacje i na ich czas poszukuję pracy lub stażu jako junior front - end developer.Front endu uczę sie od lutego 2018, kiedy byłem w drugiej klasie liceum. Ucze sie w wolnych chwilach jednak w trakcie szkoły nie miałem duzo czasu jednak udawało mi sie znaleźć czas na nauke front endu oprocz nauki do szkoły.Chciałbym sprobować swoich sił przy prawdziwych projektach oraz doskonalić swoje umiejetności pod okiem doświadczonych osób.';
+    aboutDescription.innerText = 'Cześć, Dzień dobry. Witam serdecznie na mojej stronie. Nazywam sie Michał. Aktualnie studiuje informatyke na pierwszym roku na PJATK w Warszawie,' +
+    'na czas wakacji poszukuje pracy lub stażu jako front-end developer. Nauke front-endu zacząłem w lutym 2018, bedąc w drugiej klasie liceum.' + 
+    'Wolne chwile spędzam nad nauką i zgłębianiu tajników front-endu, niestety podczas roku szkolnego nie mam za dużo czasu,' +
+    'ale jakos znajduje czas na nauke. Poznawanie nowych zagadnień zwiazanych z front-endem sprawia mi przyjemność. ' +
+    'Chciałbym sprobować swoich sił przy prawdziwych projektach oraz doskonalić swoje umiejetosci pod okiem doswiadczonych osób.' +
+    'W tym roku na uczelni dodatkowo poznałem języki takie jak: JAVA(podstawy języka, biblioteke swing oraz javafx framework), C++, C, SQL, BASH.';
     aboutContact.innerText = 'Kontakt';
     skillsBasicHeader.innerText = 'Umiejętności';
     skillsSubHeader.innerText = 'Poznałem ale niewiele używałem';
@@ -85,6 +87,3 @@ polish.addEventListener('click', function() {
     
 });
 
-// polish.onclick = function() {
-//     console.log('clicked');
-// };

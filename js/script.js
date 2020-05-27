@@ -38,6 +38,7 @@ const skillsBaseHeader = document.querySelector(".skills-base-header");
 const skillsToolsHeader = document.querySelector(".skills-tools-header");
 
 // Project section
+const projects = document.getElementById("projects");
 const projectsHeader = document.querySelector(".projects-header");
 const projectsContainer = document.querySelector(".project-container");
 const projectCard = document.querySelectorAll(".project-card");
@@ -56,7 +57,6 @@ lightTheme.click(function() {
   logo.style.color = black;
   menu.style.color = black;
   heroText.style.backgroundColor = "";
-  heroText.remove("padding");
   a[0].style.color = black;
   a[1].style.color = black;
   a[2].style.color = black;
@@ -81,14 +81,18 @@ lightTheme.click(function() {
   skillsSubHeader.style.color = black;
   skillsBaseHeader.style.color = black;
   skillsToolsHeader.style.color = black;
+  projectsHeader.style.color = white;
+  projects.style.backgroundColor = white;
+  projectsContainer.style.backgroundColor = white;
   projectsHeader.style.color = black;
-  projectsContainer.style.backgroundColor = black;
-  projectCard.style.color = black;
-  cardTitle.style.color = black;
-  cardButton.style.color = lightBlack;
-  cardButton.style.backgroundColor = orange;
-  projectDescription.style.color = black;
-  technology.style.color = black;
+  for (let i = 0; i < projectCard.length; i++) {
+    projectCard[i].style.color = black;
+    cardTitle[i].style.color = black;
+    projectDescription[i].style.color = black;
+    technology[i].style.color = black;
+    cardButton[i].style.color = lightBlack;
+    cardButton[i].style.backgroundColor = orange;
+  }
   socialContainer.style.backgroundColor = lightGray;
 });
 
@@ -188,18 +192,3 @@ darkTheme.click(function() {
   socialContainer.style.paddingBottom = '25px';
 
 });
-
-
-
-
-// // Color main nav to white
-// console.log(a);
-
-// // Change anchor styles
-// for (let i = 0; i < a.length; i++) {
-//     // console.log(a[i]);
-//     var href = a[i];
-// }
-
-// console.log(a[0]);
-// href.style.color = '#fff';
