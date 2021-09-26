@@ -52,7 +52,6 @@ const socialContainer = document.querySelector(".social-container");
 
 // Remove added styles
 lightTheme.click(function() {
-  console.log("clicked");
   header.style.backgroundColor = lightGray;
   logo.style.color = black;
   menu.style.color = black;
@@ -94,11 +93,12 @@ lightTheme.click(function() {
     cardButton[i].style.backgroundColor = orange;
   }
   socialContainer.style.backgroundColor = lightGray;
+  document.querySelector('.scrollTop').style.backgroundColor = lightBlack;
+  document.querySelector('.scrollTop i').style.color = white;
 });
 
 // Add style when dark button is clicked
 darkTheme.click(function() {
-  console.log("clicked");
   // header
   header.style.backgroundColor = lightBlack;
   logo.style.color = white;
@@ -191,4 +191,7 @@ darkTheme.click(function() {
   socialContainer.style.paddingTop = '25px';
   socialContainer.style.paddingBottom = '25px';
 
+  // scroll 
+  document.querySelector('.scrollTop').style.backgroundColor = lightGray;
+  document.querySelector('.scrollTop i').style.color = black;
 });
