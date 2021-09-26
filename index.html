@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,9 @@
 
 <body>
     <main>
+        <div class="scrollTop">
+            <i class="material-icons">arrow_upward</i>
+        </div>
         <!-- header with navbar -->
         <header class="header">
             <nav class="nav" id="nav">
@@ -53,7 +56,9 @@
                     <button class="theme" id="lightTheme">Jasny</button>
                     <button class="theme" id="darkTheme">Ciemny </button>
                     <div id="polish">
-                        <img src="images/polski.png" alt="polish lang" id="polish" class="language">
+                        <a href="#pl">
+                            <img src="images/polski.png" alt="polish lang" id="polish" class="language">
+                        </a>
                     </div>
                     <img src="images/uk.png" alt="english lang" id="english" class="language">
                 </div>
@@ -229,6 +234,7 @@
     <script src="js/nav.js"></script>
     <script src="js/script.js"></script>
     <script src="js/lang.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 
 </html>
