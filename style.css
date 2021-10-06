@@ -96,7 +96,7 @@ header.header nav ul li a {
 /* HERO */
 .home {
   height: 360px;
-  margin-top: 87px;
+  margin-top: 86px;
 }
 
 .hero { 
@@ -157,10 +157,15 @@ header.header nav ul li a {
   border-radius: var(--btn-border-radius);
 }
 
+.lang img {
+  cursor: pointer;
+}
+
 /* ABOUT */
-.about {
+.about-section {
   text-align: center;
   padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .about-header {
@@ -194,7 +199,7 @@ header.header nav ul li a {
 
 /* SKILLS SECTION */
 .skills-section {
-  margin-top: 25px;
+  padding-top: 25px;
   background-color: var(--light);
 }
 
@@ -230,7 +235,7 @@ header.header nav ul li a {
 
 /* PROJECTS */
 .projects-header {
-  margin: 15px;
+  padding: 15px;
 }
 
 .project-container {
@@ -249,6 +254,7 @@ header.header nav ul li a {
   padding-bottom: 10px;
   width: 100%;
   border-radius: 3px;
+  background-color: var(--light);
 }
 
 .project-card img {
@@ -295,8 +301,9 @@ header.header nav ul li a {
 }
 
 .more {
-  width: 100px;
+  width: 200px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 /* SOCIAL */
@@ -306,7 +313,11 @@ header.header nav ul li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 15px auto;
+  padding: 20px;
+}
+
+.social-container a {
+  padding-left: 10px;
 }
 
 .social-container img {
@@ -426,10 +437,10 @@ header.header nav ul li a {
     top: 220px;
   }
 
-  .theme-switcher {
+  /* .theme-switcher {
     height: 140px;
   }
-  
+   */
   .about {
     padding-top: 0;
   }
@@ -449,15 +460,3 @@ header.header nav ul li a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* @media screen and (min-width: 1600px) {
-  .home {
-    height: 1030px;
-  }  
-}
-
-@media screen and (min-width: 1650) {
-  .home {
-    height: 1200px;
-  }
-} */
