@@ -13,6 +13,9 @@
     <title>Michał Czech | Portfolio</title>
     <!-- css file & material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,44 +26,44 @@
         </div>
         <!-- header with navbar -->
         <header class="header">
+            <span class="menu-toggle" id="nav-toggler">
+                <i class="material-icons menu">menu</i>
+            </span>
             <nav class="nav" id="nav">
-                <span class="menu-toggle" id="nav-toggler">
-                    <i class="material-icons menu">menu</i>
-                </span>
-                <h1 class="logo"><img src="images/logo.png" alt="logo"></h1>
-                <ul class="main-nav" id="main-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">O mnie</a></li>
-                    <li><a href="#skills">Umiejętnosci</a></li>
-                    <li><a href="#projects">Projekty</a></li>
-                    <li><a href="#social">Społeczność</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                <span class="logo"><img src="images/logo.png" alt="logo"></span>
+                <ul class="main-nav hide" id="main-nav">
+                    <li><a href="#home" class="home"></a></li>
+                    <li><a href="#about" class="about"></a></li>
+                    <li><a href="#skills" class="skills"></a></li>
+                    <li><a href="#projects" class="projects"></a></li>
+                    <li><a href="#social" class="socials"></a></li>
+                    <li><a href="#contact" class="contact"></a></li>
                 </ul>
 
             </nav>
         </header>
 
         <!-- hero section -->
-        <section class="section" id="home">
+        <section class="section home" id="home">
             <div class="hero">
-                <img src="images/hero-image.jpg" alt="hero-image">
-                <h1 class="hero-text">Witaj na mojej stronie portfolio
-                    <br> <span class="txt-type" data-wait="3000" data-words="['Milo cie widziec', 'Nice to see you', 'Herzlich wilkommen']"></span></h1>
+                <div class="hero-image"></div>
+                <h1 class="hero-text"></h1>
             </div>
         </section>
 
-        <section class="themeSwitcher">
-            <div class="themeContainer">
-                <h2 class="switcherTitle">Jeżeli chcesz zmienić kolory na stronie lub jezyk mozesz to zrobić tutaj</h2>
+        <!-- theme switcher -->
+        <section class="theme-switcher">
+            <div class="theme-container">
+                <h2 class="switcher-title"></h2>
                 <div class="switchers">
-                    <button class="theme" id="lightTheme">Jasny</button>
-                    <button class="theme" id="darkTheme">Ciemny </button>
-                    <div id="polish">
-                        <a href="#pl">
-                            <img src="images/polski.png" alt="polish lang" id="polish" class="language">
-                        </a>
+                    <div>
+                        <button class="theme" id="lightTheme"></button>
+                        <button class="theme" id="darkTheme"></button>
                     </div>
-                    <img src="images/uk.png" alt="english lang" id="english" class="language">
+                    <div class="lang">
+                        <img src="images/polski.png" alt="polish lang" id="polish" class="language" data-language="pl">
+                        <img src="images/uk.png" alt="english lang" id="english" class="language" data-language="en">
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,25 +71,18 @@
         <!-- about section -->
         <section class="section" id="about">
             <div class="about-section">
-                <h2 class="about-header">O mnie</h2>
-                <!-- <div class="round-image"></div> -->
-                <p class="about-description">Cześć, Dzień dobry. Witam serdecznie na mojej stronie. Nazywam sie Michał. Aktualnie studiuje informatyke na pierwszym roku na PJATK w Warszawie, 
-                    na czas wakacji poszukuje pracy lub stażu jako front-end developer. Nauke front-endu zacząłem w lutym 2018, bedąc w drugiej klasie liceum.
-                    Wolne chwile spędzam nad nauką i zgłębianiu tajników front-endu, niestety podczas roku szkolnego nie mam za dużo czasu,
-                    ale jakos znajduje czas na nauke. Poznawanie nowych zagadnień zwiazanych z front-endem sprawia mi przyjemność. 
-                    Chciałbym sprobować swoich sił przy prawdziwych projektach oraz doskonalić swoje umiejetosci pod okiem doswiadczonych osób.
-                    W tym roku na uczelni dodatkowo poznałem języki takie jak: JAVA(podstawy języka, biblioteke swing oraz javafx framework), C++, C, SQL, BASH.
-                </p>
+                <h2 class="about-header"></h2>
+                <div class="about-description"></div>
                 <div class="about-btn">
-                    <div class="btn about-contact"><a href="#contact">Kontakt</a></div>
-                    <div class="btn about-cv">CV</div>
+                    <div class="btn about-contact"><a href="#social"></a></div>
+                    <div class="btn about-cv"><a href="#">CV</a></div>
                 </div>
             </div>
         </section>
 
         <!-- skills section -->
         <section class="section skills-section" id="skills">
-            <h2 class="skills-basic-header">Umiejętności</h2>
+            <h2 class="skills-basic-header"></h2>
             <div class="skills-basic">
                 <img src="images/html.png" alt="html" class="skills-img">
                 <img src="images/CSS.png" alt="css" class="skills-img">
@@ -99,7 +95,7 @@
                 <img src="images/RWD.png" alt="RWD" class="skills-img">
             </div>
 
-            <h2 class="skills-subheader">Poznałem, ale niewiele <span>używałem</span></h2>
+            <h3 class="skills-subheader"></h3>
             <div class="skills-update">
                 <img src="images/Bootstrap.png" alt="Bootstrap" class="skills-img">
                 <img src="images/Materialize.png" alt="Materialize" class="skills-img">
@@ -107,13 +103,13 @@
                 <img src="images/electron.png" alt="electron" class="skills-img">
             </div>
 
-            <h2 class="skills-base-header">Znam podstawy</h2>
+            <h3 class="skills-base-header"></h3>
             <div class="skills-base">
                 <img src="images/React.png" alt="react" class="skills-img">
                 <img src="images/Vuejs.png" alt="vue" class="skills-img">
             </div>
 
-            <h2 class="skills-tools-header">Narzędzia których używam do tworzenia <span>stron</span></h2>
+            <h3 class="skills-tools-header"></h3>
             <div class="skills-tools">
                 <img src="images/chrome dev tools.png" alt="chrome dev tools" class="skills-img">
                 <img src="images/Photoshop.png" alt="photoshop" class="skills-img">
@@ -125,59 +121,88 @@
 
         <!-- project section -->
         <section class="section" id="projects">
-            <h2 class="projects-header">Moje projekty</h2>
+            <h2 class="projects-header"></h2>
             <div class="project-container">
-            <div class="project-card">
-                <img src="images/portfolioWebsite.png" alt="code">
-                <div class="card-content">
-                    <h3 class="card-title">Strona Portfolio </h3>
-                    <p class="project-description">Moja strona portfolio na ktore własnie sie znajdujesz</p>
-                    <p class="technology">Użyte technologie w tym projekcie: HTML, CSS, JS</p>
+                <div class="project-card">
+                    <img src="images/countdown.png" alt="code">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="project-description"></p>
+                        <p class="technology"></p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="https://czesiek2000.github.io/countdown/" class="btn card-button"></a>
+                        <a href="https://github.com/Czesiek2000/countdown" class="btn card-button"></a>
+                    </div>
                 </div>
-                <div class="card-btn">
-                    <a href="https://czesiek2000.github.io/portfolioWebsite/" class="btn card-button" target="blank">Live</a>
-                    <a href="https://github.com/Czesiek2000/portfolioWebsite" class="btn card-button" target="blank">Kod</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="images/countdown.png" alt="code">
-                <div class="card-content">
-                    <h3 class="card-title">Licznik czasu</h3>
-                    <p class="project-description">Proste odliczanie czasu do konkretnej daty</p>
-                    <p class="technology">Uzyte technologie w tym projekcie: HTML, CSS, JS</p>
-                </div>
-                <div class="card-btn">
-                    <a href="https://czesiek2000.github.io/countdown/" class="btn card-button">Live</a>
-                    <a href="https://github.com/Czesiek2000/countdown" class="btn card-button">Kod</a>
-                </div>
-            </div>
-           
-            <div class="project-card">
-                <img src="images/formularz.png" alt="code">
-                <div class="card-content">
-                    <h3 class="card-title">Formularz</h3>
-                    <p class="project-description">Formularz stworzony z szablonu strony z grupy na Facebooku Weekly Web Dev Challenge</p>
-                    <p class="technology">Uzyte technologie w tym projekcie: HTML, CSS</p>
-                </div>
-                <div class="card-btn">
-                    <a href="https://czesiek2000.github.io/formularz/." class="btn card-button" target="blank">Live</a>
-                    <a href="https://github.com/Czesiek2000/formularz" class="btn card-button" target="blank">Kod</a>
-                </div>
-            </div>
             
-            <div class="project-card">
-                <img src="images/webdev2.png" alt="code">
-                <div class="card-content">
-                    <h3 class="card-title">Strona z szablonu</h3>
-                    <p class="project-description">Strona stworzona z szablonu strony na Facebooku Weekly Web Dev Challenge z wykorzystaniem Bootstrap</p>
-                    <p class="technology">Uzyte technologie w tym projekcie: HTML, CSS, Bootstrap</p>
+                <div class="project-card">
+                    <img src="images/formularz.png" alt="code">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="project-description"></p>
+                        <p class="technology"></p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="https://czesiek2000.github.io/formularz/." class="btn card-button" target="blank"></a>
+                        <a href="https://github.com/Czesiek2000/formularz" class="btn card-button" target="blank"></a>
+                    </div>
                 </div>
-                <div class="card-btn">
-                    <a href="https://czesiek2000.github.io/webDev2/" class="btn card-button" target="blank">Live</a>
-                    <a href="https://github.com/Czesiek2000/webDev2" class="btn card-button" target="blank">Kod</a>
+                
+                <div class="project-card">
+                    <img src="images/webdev2.png" alt="code">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="project-description"></p>
+                        <p class="technology"></p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="https://czesiek2000.github.io/webDev2/" class="btn card-button" target="blank"></a>
+                        <a href="https://github.com/Czesiek2000/webDev2" class="btn card-button" target="blank"></a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="images/numbersapi.png" alt="code">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="project-description"></p>
+                        <p class="technology"></p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="https://czesiek2000.github.io/webDev2/" class="btn card-button" target="blank"></a>
+                        <a href="https://github.com/Czesiek2000/webDev2" class="btn card-button" target="blank"></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/materializeWebsite.png" alt="code">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="project-description"></p>
+                        <p class="technology"></p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="https://czesiek2000.github.io/materializeWebsite" class="btn card-button" target="blank"></a>
+                        <a href="https://github.com/Czesiek2000/materializeWebsite" class="btn card-button" target="blank"></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/sampleBlog.png" alt="code">
+                    <div class="card-content">
+                        <h3 class="card-title"></h3>
+                        <p class="project-description"></p>
+                        <p class="technology"></p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="https://czesiek2000.github.io/sample-blog/" class="btn card-button" target="blank"></a>
+                        <a href="https://github.com/Czesiek2000/sample-blog" class="btn card-button" target="blank"></a>
+                    </div>
                 </div>
             </div>
+            <div class="more-btn">
+                <a href="https://github.com/Czesiek2000" class="more"></a>
             </div>
         </section>
 
@@ -195,42 +220,13 @@
                 </a>
             </div>
         </section>
-
-        <!-- contact section -->
-        <section class="section" id="contact">
-        <!-- <h3 class="contact-header">Skontaktuj sie ze mną</h3>
-            <p>Jezeli chcesz sie skontaktować uzyj tych linkow ktore przekieruja Cie do miejsc gdzie mozesz sie skontaktować</p>
-             <div class="contact-wrapper">
-                <form id="contact-form">
-                    <label>Imie</label>
-                    <input type="text" name="imie" id="" class="">
-
-                    <label>Nazwisko</label>
-                    <input type="text" name="nazwisko" id="" class="">
-
-                    <label>Email</label>
-                    <input type="text" name="email" id="" class="">
-
-                    <label>Wiadomość</label>
-                    <textarea name="wiadomosc" id="" cols="30" rows="10"></textarea>
-
-                    <input type="submit" value="Send" class="btn btn-submit">
-                </form>
-            </div> -->
-            
-        </section>
-
+        
         <!-- footer -->
-        <footer class="footer">
-            &copy; Michał Czech, 2019. Wszelkie prawa zastrzeżone.
-        </footer>
+        <footer class="footer"></footer>
 
     </main>
 
-    <!-- Jquery & Js files -->
-    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <!-- JS FILES -->
     <script src="js/nav.js"></script>
     <script src="js/script.js"></script>
     <script src="js/lang.js"></script>

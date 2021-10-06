@@ -7,191 +7,164 @@ const whiteBlack = "#596A80";
 const orange = "#f2915a";
 const lightGray = "#ebebeb";
 const gray = "#333";
-// Buttons to change language and theme
-const lightTheme = $("#lightTheme");
-const darkTheme = $("#darkTheme");
-const light = document.getElementById("lightTheme");
-const dark = document.getElementById("darkTheme");
-// Header
-const header = document.querySelector(".header");
-const a = document.querySelectorAll(".main-nav a");
-const logo = document.querySelector(".logo");
-const heroText = document.querySelector(".hero-text");
-const menu = document.getElementById("nav-toggler");
 
-// Theme switcher section
-const switcherTitle = document.querySelector(".switcherTitle");
-const themeContainer = document.querySelector(".themeContainer");
+// Buttons to change theme
+const light = document.getElementById('lightTheme');
+const dark = document.getElementById('darkTheme');
 
-// About me section
-const aboutSection = document.querySelector(".about-section");
-const aboutHeader = document.querySelector(".about-header");
-const aboutDescription = document.querySelector(".about-description");
-const aboutContact = document.querySelector(".about-contact");
-const aboutCv = document.querySelector(".about-cv");
+const lightTheme = {
+    container: {
+        grey: lightGray,
+        white: white
+    },
+    heroText: white,
+    text: black,
+    button: {
+        bg: orange,
+        text: black
+    }
+}
 
-// Skills sections
-const skillsSection = document.querySelector(".skills-section");
-const skillsBasicHeader = document.querySelector(".skills-basic-header");
-const skillsSubHeader = document.querySelector(".skills-subheader");
-const skillsBaseHeader = document.querySelector(".skills-base-header");
-const skillsToolsHeader = document.querySelector(".skills-tools-header");
+const darkTheme = {
+    container: {
+        primary: lighterBlack,
+        secondary: lightBlack
+    },
+    heroText: lightBlack,
+    text: white,
+    button: {
+        bg: lightBlack,
+        text: orange
+    }
+}
 
-// Project section
-const projects = document.getElementById("projects");
-const projectsHeader = document.querySelector(".projects-header");
-const projectsContainer = document.querySelector(".project-container");
-const projectCard = document.querySelectorAll(".project-card");
-const cardTitle = document.querySelectorAll(".card-title");
-const cardButton = document.querySelectorAll(".card-button");
-const projectDescription = document.querySelectorAll(".project-description");
-const technology = document.querySelectorAll(".technology");
+const elements = {
+    header: {
+        header: document.querySelector('.header'),
+        a: document.querySelectorAll('.main-nav a'),
+        heroText: document.querySelector(".hero-text"),
+        menu: document.querySelector(".menu-toggle i")
+    },
+    themeSwitcher: {
+        title: document.querySelector(".switcher-title"),
+        container: document.querySelector(".theme-container")
+    },
+    about: {
+        section: document.querySelector(".about-section"),
+        header: document.querySelector(".about-header"),
+        description: document.querySelector(".about-description"),
+        contact: {
+            button: document.querySelector(".about-contact"),
+            a: document.querySelector('.about-contact a')
+        },
+        cv: {
+            button: document.querySelector(".about-cv"),
+            a: document.querySelector(".about-cv a")
+        }
+    },
+    skills: {
+        section: document.querySelector(".skills-section"),
+        basic: document.querySelector(".skills-basic-header"),
+        sub: document.querySelector(".skills-subheader"),
+        base: document.querySelector(".skills-base-header"),
+        tools: document.querySelector(".skills-tools-header"),
+    },
+    project: {
+        section: document.getElementById("projects"),
+        header: document.querySelector(".projects-header"),
+        projectCard: document.querySelectorAll(".project-card"),
+        cardTitle: document.querySelectorAll(".card-title"),
+        cardButton: document.querySelectorAll(".card-button"),
+        projectDescription: document.querySelectorAll(".project-description"),
+        technology: document.querySelectorAll(".technology"),
+    },
+    social: document.querySelector(".social-container"),
+    scroll: document.querySelector('.scrollTop'),
+    more: document.querySelector('.more'),
+    footer: document.querySelector('.footer')
+}
 
-// Social
-const socialContainer = document.querySelector(".social-container");
+light.addEventListener('click', () => {
+    elements.header.header.style.backgroundColor = lightTheme.container.grey;
+    elements.header.a.forEach(a => a.style.color = lightTheme.text);
+    elements.header.heroText.style.color = lightTheme.heroText;
+    elements.header.menu.style.color = lightTheme.text;
+    
+    console.log(elements.themeSwitcher);
+    elements.themeSwitcher.title.style.color = lightTheme.text;
+    elements.themeSwitcher.container.style.backgroundColor = lightTheme.container.white;
+    
+    elements.about.section.style.backgroundColor = lightTheme.container.grey;
+    elements.about.header.style.color = lightTheme.text;
+    elements.about.description.style.color = lightTheme.text;
+    elements.about.contact.button.style.backgroundColor = lightTheme.button.bg;
+    document.querySelector('.about-contact a').style.color = lightTheme.button.text;
+    // elements.about.contact.a.style.color = lightTheme.button.text;
 
-// Remove added styles
-lightTheme.click(function() {
-  header.style.backgroundColor = lightGray;
-  logo.style.color = black;
-  menu.style.color = black;
-  heroText.style.backgroundColor = "";
-  a[0].style.color = black;
-  a[1].style.color = black;
-  a[2].style.color = black;
-  a[3].style.color = black;
-  a[4].style.color = black;
-  a[5].style.color = black;
-  switcherTitle.style.color = lightBlack;
-  themeContainer.style.backgroundColor = lightGray;
-  light.style.backgroundColor = orange;
-  light.style.color = lightBlack;
-  dark.style.backgroundColor = orange;
-  dark.style.color = lightBlack;
-  aboutSection.style.backgroundColor = white;
-  aboutHeader.style.color = black;
-  aboutDescription.style.color = black;
-  aboutContact.style.color = black;
-  aboutContact.style.backgroundColor = orange;
-  aboutCv.style.color = black;
-  aboutCv.style.backgroundColor = orange;
-  skillsSection.style.backgroundColor = lightGray;
-  skillsBasicHeader.style.color = black;
-  skillsSubHeader.style.color = black;
-  skillsBaseHeader.style.color = black;
-  skillsToolsHeader.style.color = black;
-  projectsHeader.style.color = white;
-  projects.style.backgroundColor = white;
-  projectsContainer.style.backgroundColor = white;
-  projectsHeader.style.color = black;
-  for (let i = 0; i < projectCard.length; i++) {
-    projectCard[i].style.color = black;
-    cardTitle[i].style.color = black;
-    projectDescription[i].style.color = black;
-    technology[i].style.color = black;
-    cardButton[i].style.color = lightBlack;
-    cardButton[i].style.backgroundColor = orange;
-  }
-  socialContainer.style.backgroundColor = lightGray;
-  document.querySelector('.scrollTop').style.backgroundColor = lightBlack;
-  document.querySelector('.scrollTop i').style.color = white;
-});
+    elements.about.cv.button.style.backgroundColor = lightTheme.button.bg;
+    elements.about.cv.a.style.color = lightTheme.button.text;
 
-// Add style when dark button is clicked
-darkTheme.click(function() {
-  // header
-  header.style.backgroundColor = lightBlack;
-  logo.style.color = white;
-  menu.style.color = white;
-  // hero
-  heroText.style.backgroundColor = lightBlack;
-  heroText.style.padding = "40px";
-  // links in navigation
-  a[0].style.color = white;
-  a[1].style.color = white;
-  a[2].style.color = white;
-  a[3].style.color = white;
-  a[4].style.color = white;
-  a[5].style.color = white;
-  // switcher
-  switcherTitle.style.color = white;
-  themeContainer.style.backgroundColor = lighterBlack;
-  themeContainer.style.marginBottom = "-5px";
-  light.style.backgroundColor = lightBlack;
-  light.style.color = orange;
-  dark.style.backgroundColor = lightBlack;
-  dark.style.color = orange;
-  // about section
-  aboutSection.style.backgroundColor = lightBlack;
-  aboutSection.style.paddingBottom = "5px";
-  aboutSection.style.paddingTop = "5px";
-  aboutSection.style.marginTop = "5px";
-  aboutHeader.style.color = white;
-  aboutDescription.style.color = white;
-  aboutContact.style.color = lightBlack;
-  aboutContact.style.backgroundColor = orange;
-  // aboutContact.style.border = '3px solid white';
-  aboutCv.style.color = lightBlack;
-  aboutCv.style.backgroundColor = orange;
-  // skills section
-  skillsSection.style.backgroundColor = lighterBlack;
-  skillsBasicHeader.style.color = white;
-  skillsSubHeader.style.color = white;
-  skillsBaseHeader.style.color = white;
-  skillsToolsHeader.style.color = white;
-  // projects
-  projectsContainer.style.backgroundColor = lightBlack;
-  projectsContainer.style.marginTop = "-88px";
-  projectsContainer.style.paddingTop = "86px";
+    elements.skills.section.style.backgroundColor = lightTheme.container.grey;
+    elements.skills.basic.style.color = lightTheme.text;
+    elements.skills.sub.style.color = lightTheme.text;
+    elements.skills.base.style.color = lightTheme.text;
+    elements.skills.tools.style.color = lightTheme.text;
+    
+    elements.project.section.style.backgroundColor = lightTheme.container.grey;
+    elements.project.header.style.color = lightTheme.text;
+    elements.project.projectCard.forEach(t => t.style.backgroundColor = lightTheme.container.grey)
+    elements.project.cardTitle.forEach(t => t.style.color = lightTheme.text)
+    elements.project.cardButton.forEach(t => t.style.color = lightTheme.button.text)
+    elements.project.cardButton.forEach(t => t.style.backgroundColor = lightTheme.button.bg)
+    elements.project.projectDescription.forEach(t => t.style.color = lightTheme.text)
+    elements.project.technology.forEach(t => t.style.color = lightTheme.text)
 
-  projectsHeader.style.color = white;
-  projectCard[0].style.color = white;
-  cardTitle[0].style.color = white;
-  projectDescription[0].style.color = white;
-  technology[0].style.color = white;
-  cardButton[0].style.color = lightBlack;
-  cardButton[0].style.backgroundColor = orange;
+    elements.social.style.backgroundColor = lightTheme.container.lighther;
+    
+    elements.more.style.backgroundColor = lightTheme.button.bg;
+    elements.more.style.color = lightTheme.button.text;
+    elements.footer.style.backgroundColor = darkTheme.container.secondary;
+})
 
-  projectCard[1].style.color = white;
-  cardTitle[1].style.color = white;
-  projectDescription[1].style.color = white;
-  technology[1].style.color = white;
-  cardButton[1].style.color = lightBlack;
-  cardButton[1].style.backgroundColor = orange;
+dark.addEventListener('click', () => {
+    elements.header.header.style.backgroundColor = darkTheme.container.primary;
+    elements.header.a.forEach(a => a.style.color = darkTheme.text);
+    elements.header.heroText.style.color = darkTheme.heroText;
+    elements.header.menu.style.color = darkTheme.text;
+    
+    console.log(elements.themeSwitcher.title);
+    elements.themeSwitcher.title.style.color = darkTheme.text;
+    elements.themeSwitcher.container.style.backgroundColor = darkTheme.container.secondary
+    
+    elements.about.section.style.backgroundColor = darkTheme.container.primary;
+    elements.about.section.style.color = darkTheme.text;
+    
+    elements.about.contact.button.style.backgroundColor = darkTheme.button.bg;
+    // elements.about.contact.a.style.color = darkTheme.button.text;
+    document.querySelector('.about-contact a').style.color = darkTheme.button.text;
 
-  projectCard[2].style.color = white;
-  cardTitle[2].style.color = white;
-  projectDescription[2].style.color = white;
-  technology[2].style.color = white;
-  cardButton[2].style.color = lightBlack;
-  cardButton[2].style.backgroundColor = orange;
+    elements.about.cv.button.style.backgroundColor = darkTheme.button.bg;
+    elements.about.cv.a.style.color = darkTheme.button.text;
+    
+    elements.skills.section.style.backgroundColor = darkTheme.container.secondary;
+    elements.skills.section.style.color = darkTheme.text;
+    
+    elements.project.section.style.backgroundColor = darkTheme.container.primary;
+    elements.project.header.style.color = darkTheme.text;
+    elements.project.projectCard.forEach(t => t.style.backgroundColor = lightBlack)
+    elements.project.cardTitle.forEach(t => t.style.color = darkTheme.text)
+    elements.project.cardButton.forEach(t => t.style.color = darkTheme.button.text)
+    elements.project.cardButton.forEach(t => t.style.backgroundColor = lighterBlack)
+    elements.project.projectDescription.forEach(t => t.style.color = darkTheme.text)
+    elements.project.technology.forEach(t => t.style.color = darkTheme.text)
 
-  projectCard[3].style.color = white;
-  cardTitle[3].style.color = white;
-  projectDescription[3].style.color = white;
-  technology[3].style.color = white;
-  cardButton[3].style.color = lightBlack;
-  cardButton[3].style.backgroundColor = orange;
+    elements.more.style.backgroundColor = darkTheme.button.bg;
+    elements.more.style.color = darkTheme.button.text;
 
-  cardButton[4].style.color = lightBlack;
-  cardButton[4].style.backgroundColor = orange;
+    elements.social.style.backgroundColor = darkTheme.container.secondary;
+    
+    elements.scroll.style.backgroundColor = white;
+    elements.scroll.style.color = lightBlack;
 
-  cardButton[5].style.color = lightBlack;
-  cardButton[5].style.backgroundColor = orange;
-
-  cardButton[6].style.color = lightBlack;
-  cardButton[6].style.backgroundColor = orange;
-
-  cardButton[7].style.color = lightBlack;
-  cardButton[7].style.backgroundColor = orange;
-
-  // social section
-  socialContainer.style.backgroundColor = lighterBlack;
-  socialContainer.style.marginTop = '0';
-  socialContainer.style.paddingTop = '25px';
-  socialContainer.style.paddingBottom = '25px';
-
-  // scroll 
-  document.querySelector('.scrollTop').style.backgroundColor = lightGray;
-  document.querySelector('.scrollTop i').style.color = black;
-});
+    elements.footer.style.backgroundColor = darkTheme.container.primary;
+})
