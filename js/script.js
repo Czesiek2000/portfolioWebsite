@@ -167,4 +167,5 @@ dark.addEventListener('click', () => {
     elements.scroll.style.color = lightBlack;
 
     elements.footer.style.backgroundColor = darkTheme.container.primary;
+    elements.footer.style.color = darkTheme.button.text;
 })

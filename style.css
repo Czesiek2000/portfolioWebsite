@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+.active {
+  border-bottom: 2px solid var(--orange);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -74,6 +78,10 @@ header.header nav ul li {
 header.header nav ul li a {
   text-decoration: none;
   color: var(--black);
+}
+
+header.header nav ul li a:hover {
+  border-bottom: 2px solid var(--orange);
 }
 
 .main-nav {

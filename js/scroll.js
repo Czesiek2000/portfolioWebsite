@@ -2,7 +2,10 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
+        document.querySelectorAll('nav ul li a').forEach(e => {
+            e.classList.remove('active');
+        })
+        anchor.classList.add('active');
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
             block: 'center'
